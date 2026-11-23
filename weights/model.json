@@ -1,6 +1,6 @@
 {
   "model": "YOLOv5s strawberry ripeness detector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "classes": [
     "Early-Turning",
     "Green",
@@ -13,7 +13,7 @@
   "training_epochs": 100,
   "bytes": 14375784,
   "sha256": "3eaeb51a87b30bd4efe2fdfae39c93dc91f9a50bc2caa552f619ea204f0cc77e",
-  "download_url": "https://github.com/XhyLee/strawberry-ripeness-yolov5/releases/download/v1.0.0/strawberry_best.pt",
+  "download_url": "https://github.com/XhyLee/strawberry-ripeness-yolov5/releases/download/v1.0.1/strawberry_best.pt",
   "metrics_source": "Historical validation log, not independently re-evaluated",
   "best_fitness_log_row": {
     "epoch": 61.0,

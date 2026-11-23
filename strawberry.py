@@ -8,6 +8,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import ssl
 import sys
 import urllib.request
 
@@ -15,7 +16,7 @@ ROOT = Path(__file__).resolve().parent
 YOLO = ROOT / "yolov5-master"
 DEFAULT_WEIGHTS = ROOT / "weights" / "strawberry_best.pt"
 CLASSES = ["Early-Turning", "Green", "Late-Turning", "Red", "Turning", "White"]
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 
 @contextmanager
@@ -106,7 +107,16 @@ def download_weights(destination):
     temporary = destination.with_name(destination.name + ".download")
     try:
         request = urllib.request.Request(metadata["download_url"], headers={"User-Agent": "strawberry-ripeness-yolov5"})
-        with urllib.request.urlopen(request, timeout=60) as response, temporary.open("wb") as output:
+        context = ssl.create_default_context()
+        # Some Windows Python installations have no OpenSSL CA bundle. Add the
+        # maintained bundle installed by requests, preserving certificate checks.
+        try:
+            import certifi
+        except ImportError:
+            pass
+        else:
+            context.load_verify_locations(certifi.where())
+        with urllib.request.urlopen(request, timeout=60, context=context) as response, temporary.open("wb") as output:
             digest = hashlib.sha256()
             while chunk := response.read(1024 * 1024):
                 digest.update(chunk)

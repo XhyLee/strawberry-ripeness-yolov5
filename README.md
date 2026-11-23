@@ -38,7 +38,7 @@ python strawberry.py download-weights
 
 若 PowerShell 限制脚本激活，可直接使用 `.\.venv\Scripts\python.exe` 替代后续命令中的 `python`。已提供的本地项目保留原虚拟环境，通常无需重新创建。
 
-模型位于 [v1.0.0 Release](https://github.com/XhyLee/strawberry-ripeness-yolov5/releases/tag/v1.0.0)，没有放进 Git 历史。也可以手动下载 `strawberry_best.pt` 到 `weights/`，对照 `weights/SHA256SUMS.txt` 校验。检查点使用 PyTorch 加载机制，只加载可信来源模型。
+模型位于 [v1.0.1 Release](https://github.com/XhyLee/strawberry-ripeness-yolov5/releases/tag/v1.0.1)，没有放进 Git 历史。也可以手动下载 `strawberry_best.pt` 到 `weights/`，对照 `weights/SHA256SUMS.txt` 校验。检查点使用 PyTorch 加载机制，只加载可信来源模型。
 
 ## 快速检测
 
