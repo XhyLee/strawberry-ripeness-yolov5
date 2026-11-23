@@ -1,0 +1,50 @@
+{
+  "model": "YOLOv5s strawberry ripeness detector",
+  "version": "1.0.0",
+  "classes": [
+    "Early-Turning",
+    "Green",
+    "Late-Turning",
+    "Red",
+    "Turning",
+    "White"
+  ],
+  "image_size": 640,
+  "training_epochs": 100,
+  "bytes": 14375784,
+  "sha256": "3eaeb51a87b30bd4efe2fdfae39c93dc91f9a50bc2caa552f619ea204f0cc77e",
+  "download_url": "https://github.com/XhyLee/strawberry-ripeness-yolov5/releases/download/v1.0.0/strawberry_best.pt",
+  "metrics_source": "Historical validation log, not independently re-evaluated",
+  "best_fitness_log_row": {
+    "epoch": 61.0,
+    "train/box_loss": 0.033307,
+    "train/obj_loss": 0.027278,
+    "train/cls_loss": 0.015578,
+    "metrics/precision": 0.44825,
+    "metrics/recall": 0.69143,
+    "metrics/mAP_0.5": 0.58318,
+    "metrics/mAP_0.5:0.95": 0.41388,
+    "val/box_loss": 0.033112,
+    "val/obj_loss": 0.035448,
+    "val/cls_loss": 0.024152,
+    "x/lr0": 0.00406,
+    "x/lr1": 0.00406,
+    "x/lr2": 0.00406
+  },
+  "last_log_row": {
+    "epoch": 99.0,
+    "train/box_loss": 0.026595,
+    "train/obj_loss": 0.023054,
+    "train/cls_loss": 0.011078,
+    "metrics/precision": 0.43577,
+    "metrics/recall": 0.7002,
+    "metrics/mAP_0.5": 0.53133,
+    "metrics/mAP_0.5:0.95": 0.3963,
+    "val/box_loss": 0.029897,
+    "val/obj_loss": 0.037032,
+    "val/cls_loss": 0.025522,
+    "x/lr0": 0.000298,
+    "x/lr1": 0.000298,
+    "x/lr2": 0.000298
+  }
+}

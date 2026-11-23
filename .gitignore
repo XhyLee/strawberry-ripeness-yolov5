@@ -1,0 +1,26 @@
+# Local environments and editor state
+.venv/
+venv/
+.vscode/
+.idea/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.log
+
+# Datasets and generated runs stay on this computer
+datasets/
+runs/
+**/runs/
+*.cache
+*.pt
+*.onnx
+*.engine
+*.tflite
+*.download
+*.zip
+.DS_Store
+Thumbs.db

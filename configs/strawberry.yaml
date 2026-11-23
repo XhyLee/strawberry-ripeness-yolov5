@@ -1,0 +1,12 @@
+# Paths are resolved relative to this file by strawberry.py.
+path: ../datasets/strawberry
+train: images/train
+val: images/val
+nc: 6
+names:
+  0: Early-Turning
+  1: Green
+  2: Late-Turning
+  3: Red
+  4: Turning
+  5: White
